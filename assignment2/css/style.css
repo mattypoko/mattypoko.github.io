@@ -1,0 +1,179 @@
+/* import custom font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600&display=swap');
+
+/* basic reset */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+  color: #202122;
+  font-family: 'Merriweather', Georgia, "Times New Roman", serif;
+  line-height: 1.6;
+}
+
+/* top navigation */
+nav {
+  background-color: #ffffff;
+  border-bottom: 1px solid #a2a9b1;
+  padding: 10px 20px;
+  font-size: 14px;
+}
+
+nav a {
+  color: #0645ad;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+  color: #0b0080;
+}
+
+/* main article container */
+main {
+  max-width: 900px;
+  background-color: #ffffff;
+  margin: 20px auto;
+  padding: 20px 30px;
+  border: 1px solid #a2a9b1;
+}
+
+/* headings */
+h1 {
+  font-size: 32px;
+  font-weight: normal;
+  border-bottom: 1px solid #a2a9b1;
+  padding-bottom: 5px;
+  margin-top: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+h2 {
+  font-size: 22px;
+  font-weight: normal;
+  border-bottom: 1px solid #a2a9b1;
+  margin-top: 30px;
+  padding-bottom: 4px;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+/* paragraphs */
+p {
+  font-size: 16px;
+  margin: 12px 0;
+}
+
+/* images */
+img {
+  max-width: 100%;
+  height: auto;
+  margin: 15px 0;
+  border: 1px solid #c8ccd1;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* NEW CSS PROPERTY: box-shadow */
+}
+
+/* lists */
+ul, ol {
+  margin-left: 30px;
+}
+
+li {
+  margin: 6px 0;
+}
+
+/* links */
+a {
+  color: #0645ad;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* small reference text */
+small {
+  color: #54595d;
+  font-size: 13px;
+}
+
+/* ===== CLASSES ===== */
+
+/* Class 1: Highlighted text box */
+.highlight-box {
+  background-color: #f0f6ff;
+  border-left: 4px solid #0645ad;
+  padding: 15px;
+  margin: 20px 0;
+  border-radius: 4px; /* NEW CSS PROPERTY: border-radius */
+}
+
+/* Class 2: Info caption for images */
+.caption {
+  font-style: italic;
+  color: #54595d;
+  font-size: 14px;
+  text-align: center;
+  margin-top: -10px;
+  margin-bottom: 20px;
+}
+
+/* Class 3: Important emphasis */
+.important {
+  font-weight: bold;
+  color: #d73027;
+  background-color: #fff3cd;
+  padding: 2px 6px;
+  border-radius: 3px;
+}
+
+/* ===== IMAGE GALLERY GRID ===== */
+.image-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Force 3 columns */
+  gap: 20px;
+  margin: 30px 0;
+  border: 5px solid red; /* DEBUG BORDER - you can see the whole gallery */
+  padding: 20px;
+}
+
+.image-gallery > div {
+  border: 3px solid blue; /* DEBUG BORDER - you can see each gallery item */
+  padding: 10px;
+}
+
+.image-gallery img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover; /* NEW CSS PROPERTY: object-fit */
+  border: 1px solid #c8ccd1;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease; /* NEW CSS PROPERTY: transition */
+}
+
+.image-gallery img:hover {
+  transform: scale(1.05); /* NEW CSS PROPERTY: transform */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+/* ===== GRID LAYOUT FOR SECTIONS ===== */
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal columns */
+  gap: 30px;
+  margin: 20px 0;
+  border: 5px solid green; /* DEBUG BORDER - you can see the whole container */
+  padding: 20px;
+}
+
+.grid-item {
+  padding: 20px;
+  background-color: #f8f9fa;
+  border: 3px solid orange; /* DEBUG BORDER - you can see each grid item */
+  border-radius: 8px;
+}
