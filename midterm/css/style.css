@@ -1,0 +1,245 @@
+/* import fonts from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Open+Sans:wght@400;600&display=swap');
+
+/* basic reset */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #0a0a0a;
+  color: #f0f0f0;
+  font-family: 'Open Sans', Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* top navigation */
+nav {
+  background-color: #111111;
+  border-bottom: 3px solid #1a6bff;
+  padding: 12px 20px;
+  font-size: 14px;
+}
+
+.nav-grid {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  justify-content: start;
+  gap: 24px;
+}
+
+nav a {
+  color: #f0f0f0;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-size: 13px;
+}
+
+nav a:hover {
+  color: #1a6bff;
+  text-decoration: underline;
+}
+
+/* main container */
+main {
+  max-width: 900px;
+  background-color: #111111;
+  margin: 20px auto;
+  padding: 20px 30px;
+  border: 1px solid #333333;
+}
+
+/* headings */
+h1 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  border-bottom: 2px solid #1a6bff;
+  padding-bottom: 8px;
+  margin-top: 0;
+  color: #ffffff;
+  letter-spacing: 0.05em;
+}
+
+h2 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  border-bottom: 1px solid #333333;
+  margin-top: 30px;
+  padding-bottom: 4px;
+  color: #1a6bff;
+  letter-spacing: 0.03em;
+}
+
+h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 16px;
+  color: #ffffff;
+}
+
+/* paragraphs */
+p {
+  font-size: 15px;
+  margin: 12px 0;
+  color: #cccccc;
+}
+
+/* images */
+img {
+  max-width: 100%;
+  height: auto;
+  margin: 10px 0;
+  border: 1px solid #333333;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+
+/* lists */
+ul, ol {
+  margin-left: 30px;
+  color: #cccccc;
+}
+
+li {
+  margin: 6px 0;
+}
+
+/* links */
+a {
+  color: #1a6bff;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* small text */
+small {
+  color: #666666;
+  font-size: 13px;
+}
+
+/* ===== CLASSES ===== */
+
+/* Class 1: highlight box */
+.highlight-box {
+  background-color: #1a1a2e;
+  border-left: 4px solid #1a6bff;
+  padding: 15px;
+  margin: 20px 0;
+  border-radius: 4px;
+}
+
+/* Class 2: caption */
+.caption {
+  font-style: italic;
+  color: #888888;
+  font-size: 13px;
+  text-align: center;
+  margin-top: -6px;
+  margin-bottom: 16px;
+}
+
+/* Class 3: important */
+.important {
+  font-weight: bold;
+  color: #1a6bff;
+  background-color: #0d1f44;
+  padding: 2px 6px;
+  border-radius: 3px;
+}
+
+/* ===== IMAGE GALLERY GRID ===== */
+.image-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin: 24px 0;
+}
+
+.image-gallery > div {
+  padding: 8px;
+  background-color: #1a1a1a;
+  border: 1px solid #333333;
+}
+
+.image-gallery img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.image-gallery img:hover {
+  transform: scale(1.04);
+}
+
+/* ===== TWO-COLUMN GRID ===== */
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin: 20px 0;
+}
+
+.grid-item {
+  padding: 16px;
+  background-color: #1a1a1a;
+  border: 1px solid #333333;
+  border-radius: 4px;
+}
+
+/* ===== JS-TOGGLED CLASSES ===== */
+
+/* Added by JS on scroll */
+.nav-solid {
+  background-color: #000000;
+  border-bottom-color: #0040cc;
+}
+
+/* Added by JS when an award is clicked */
+.award-done {
+  color: #1a6bff;
+  font-weight: bold;
+}
+
+/* Added by JS when title is clicked */
+.title-glow {
+  color: #1a6bff;
+  text-shadow: 0 0 12px rgba(26, 107, 255, 0.5);
+}
+
+/* ===== RESPONSIVENESS ===== */
+@media (max-width: 600px) {
+
+  /* Nav stacks vertically */
+  .nav-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  /* Tighten main padding */
+  main {
+    margin: 10px;
+    padding: 14px 16px;
+  }
+
+  /* Gallery goes single column */
+  .image-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  /* Discography grid goes single column */
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+
+  h1 {
+    font-size: 26px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+}
